@@ -1,0 +1,6 @@
+#!/bin/bash
+
+tmpfile=$(mktemp)
+fortune | cowsay -f bong > "$tmpfile"
+fastfetch -l $tmpfile
+rm "$tmpfile"
